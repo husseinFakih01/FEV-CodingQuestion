@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  
+  <nav class="navbar navbar-dark bg-dark">
+    
+    <form class="form-inline">
+      <p style="text-align:center;">
+        <img src="{% static 'images/FEV-Logo.png' %}"  /></p>
+      <li>
+        
+        <a
+          class="btn btn-outline-success"
+          type="button"
+          href="{% url 'add-Item' %}"
+          style="color:red;font-size:20px;"
+        >
+          Create Item
+        </a>
+      </li>
+
+      <li>
+        <a
+          class="btn btn-outline-success"
+          type="button"
+          href="{% url 'items_toBeUpdated' %}"
+          style="color:red;font-size:20px;"
+        >
+          Edit Items
+        </a>
+      </li>
+      <li>
+        <a
+          class="btn btn-outline-success"
+          type="button"
+          href="{% url 'allItems' %}"
+          style="color:red;font-size:20px;"
+        >
+          All Items
+        </a>
+      </li>
+    </form>
+  </nav>
+
+  <head>
+    
+      
+    <meta charset="utf-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+   
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="{% static 'formTest/bootStrap/css/flatly.min.css' %}"
+    />
+    <link rel="stylesheet" href="{% static 'formTest/styles.css' %}" />
+  </head>
+  <body>
+    
+    
+    <div class="container-fluid" id="wrapper">
+      
+      <div class="row">
+        <div class="col-lg-4 col-lg-offset-4" id="content">
+          
+          <h1>All Items In Invent</h1>
+          <ul class="list-group t20">
+            {% for item in item_list %}
+            <div>
+              <strong> Item Name: {{item}}</strong>
+              <li class="list-group-item">Price: ${{item.price}}</li>
+              <li class="list-group-item">Description: {{item.description}}</li>
+              <li class="list-group-item">
+                Date and time added: {{item.dateAdded}}
+              </li>
+              <li class="list-group-item">Quantity: {{item.quantity}}</li>
+            </div>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="static/formTest/bootStrap/js/jquery.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="static/formTest/bootStrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
