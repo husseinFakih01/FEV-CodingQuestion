@@ -1,13 +1,13 @@
 # FEV-CodingQuestion
 ## Description:
 This project is about an inventory system, where the user can perform the CRUD operations. You can find the unit test for the form submittion in "tests.py". The project uses
-local sqllite, and the crednetials for the admin user are:
-username: user
+local sqllite, and the crednetials for the admin user are: <br/>
+username: user <br/>
 password: @testing
 
 
 ## Technology stacks used:
-Django v4.0.5
+Django v4.0.5 <br/>
 Python v3.10.5
 
 
