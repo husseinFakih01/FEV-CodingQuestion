@@ -7,8 +7,8 @@ password: @testing
 
 
 ## Technology stacks used:
-Django v4.0.5 <br/>
-Python v3.10.5
+1. Django v4.0.5 
+2. Python v3.10.5
 
 
 
